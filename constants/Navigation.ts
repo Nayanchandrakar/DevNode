@@ -7,6 +7,6 @@ export interface NavigationElemProps{
 export const NavigationMenu : NavigationElemProps[] = [
     {id: 63864 ,label:'My Feed' , redirect:'/'},
     {id: 63864 ,label:'Explore' , redirect:'/explore'},
-    {id: 63864 ,label:'Bookmarks' , redirect:'/sign-up'},
-    {id: 63864 ,label:'Favourites' , redirect:'/sign-in'},
+    {id: 63864 ,label:'Bookmarks' , redirect:'/bookmarks'},
+    {id: 63864 ,label:'Favourites' , redirect:'/favourites'},
 ]

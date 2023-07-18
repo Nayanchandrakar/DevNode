@@ -1,5 +1,6 @@
 'use client'
 import { Button } from '@components/ui/Button'
+import { signIn } from 'next-auth/react'
 import Link from 'next/link'
 import { FC } from 'react'
 import { FcGoogle } from 'react-icons/fc'
@@ -19,6 +20,7 @@ const Signin: FC = () => {
             variant="default"
             size="auto"
             className='mt-2'
+            onClick={() => signIn('google')}
         >
             <FcGoogle size={20} />
             Google
