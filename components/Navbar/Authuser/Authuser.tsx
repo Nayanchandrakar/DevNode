@@ -30,8 +30,8 @@ const Authuser: FC<AuthuserProps> = ({
                 (<DropdownMenuContent className="w-56 bg-white mt-5 mr-4 ">
                     <DropdownMenuLabel>My Account</DropdownMenuLabel>
                     <DropdownMenuSeparator />
-                    <DropdownMenuItem>Profile</DropdownMenuItem>
-                    <DropdownMenuItem>Settings</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => router.push('/profile')}>Profile</DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => router.push('/settings')} >Settings</DropdownMenuItem>
                     <DropdownMenuSeparator />
                     <DropdownMenuItem onClick={() => signOut()}>Logout</DropdownMenuItem>
                     <DropdownMenuGroup>

@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const Navigation = () => {
     return (
-        <div className="flex flex-row gap-4 items-center justify-center">
+        <div className="hidden flex-row gap-4 md:flex items-center justify-center">
             {NavigationMenu?.map((elem) => {
 
                 let { id, label, redirect }: NavigationElemProps = elem

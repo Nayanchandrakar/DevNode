@@ -17,12 +17,12 @@ const StaticNavigation: FC = () => {
         </span>
 
         {/* post write button */}
-        <Button variant="iconRounded" >
+        <Button className='bg-gradient' variant="iconRounded" >
             <CiEdit
                 size={20}
                 color='white'
             />
-            Write
+            Create
         </Button>
 
         {/* Avatar button with menu */}

@@ -20,6 +20,10 @@ module.exports = {
       colors: {
         primary: "#fffff",
         secondary: "#0f172a",
+        "light-blue": "#f8fafc",
+      },
+      backgroundImage: {
+        gradient: ["linear-gradient(to left, #4776e6, #8e54e9)"],
       },
       keyframes: {
         "accordion-down": {

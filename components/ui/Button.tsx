@@ -5,7 +5,7 @@ import { BiLoaderAlt } from 'react-icons/bi'
 
 
 const buttonVariants = cva(
-    "flex justify-center flex-row gap-1.5 rounded-md items-center transition-colors duration-300 font-medium antialised cursor-pointer",
+    "flex justify-center flex-row gap-1.5 rounded-md items-center transition-colors duration-300 font-medium antialised cursor-pointer disabled:cursor-not-allowed",
 
     {
         variants: {
@@ -41,13 +41,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 className={cn(buttonVariants({ variant, size, className }))}
                 ref={ref}
                 disabled={isLoading}
-
                 {...props}>
-
                 {/* if loading then loader will be shown */}
                 {isLoading ? <BiLoaderAlt className="animate-spin" /> : null}
                 {children}
-
             </button>
         )
     }
