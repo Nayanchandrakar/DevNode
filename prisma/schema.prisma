@@ -23,25 +23,34 @@ model account {
 }
 
 model Profile {
-  id                   String     @id @default(cuid())
-  fullname             String?    @unique
+  id                   String   @id @default(cuid())
+  fullname             String?  @unique
   portfolioUrl         String?
   stackOverflowProfile String?
   githubProfile        String?
   Location             String?
   LinkedinUrl          String?
-  username             String     @unique
+  username             String   @unique
   bio                  String?
-  account              account    @relation(fields: [userId], references: [id])
-  userId               String     @unique
-  isCommunity          Boolean
-  CommunityProfile     Community?
-  createdAt            DateTime   @default(now())
-  updatedAt            DateTime   @updatedAt
+  account              account  @relation(fields: [userId], references: [id])
+  userId               String   @unique
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
 }
 
 model Community {
-  id      String  @id @default(cuid())
-  owner   Profile @relation(fields: [ownerId], references: [id])
-  ownerId String  @unique
+  id            String    @id @default(cuid())
+  subDomain     String    @unique
+  communityName String    @unique
+  ownerId       String    @unique
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  members       Members[]
+}
+
+model Members {
+  id          String     @id @default(cuid())
+  Community   Community? @relation(fields: [communityId], references: [id])
+  communityId String     @unique
+  memberId    String     @unique
 }

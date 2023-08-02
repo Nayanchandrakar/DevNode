@@ -1,8 +1,9 @@
-import { Button } from '@components/ui/Button'
+import { Button, buttonVariants } from '@components/ui/Button'
 import { FC } from 'react'
 import { BsSearch } from 'react-icons/bs'
 import { CiEdit } from 'react-icons/ci'
 import DropdownContent from './DropdownContent'
+import Link from 'next/link'
 
 const StaticNavigation: FC = () => {
     return <div className='flex justify-between flex-row gap-3'>
@@ -17,13 +18,13 @@ const StaticNavigation: FC = () => {
         </span>
 
         {/* post write button */}
-        <Button className='bg-gradient' variant="iconRounded" >
+        <Link href="/community" className={buttonVariants({ variant: 'iconRounded', className: 'bg-gradient' })}  >
             <CiEdit
                 size={20}
                 color='white'
             />
             Create
-        </Button>
+        </Link>
 
         {/* Avatar button with menu */}
         <DropdownContent />

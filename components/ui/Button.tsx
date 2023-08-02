@@ -5,13 +5,13 @@ import { BiLoaderAlt } from 'react-icons/bi'
 
 
 const buttonVariants = cva(
-    "flex justify-center flex-row gap-1.5 rounded-md items-center transition-colors duration-300 font-medium antialised cursor-pointer disabled:cursor-not-allowed",
+    "flex justify-center flex-row gap-1.5 items-center transition-colors duration-300 font-medium antialised cursor-pointer disabled:cursor-not-allowed",
 
     {
         variants: {
             variant: {
-                default: 'bg-black text-zinc-300 text-sm hover:bg-black/90 rounded-lg',
-                destructive: 'bg-red-600 text-zinc-100 text-sm hover:bg-red-600/90',
+                default: 'bg-black text-white text-sm hover:bg-black/90 rounded-lg',
+                destructive: 'bg-red-600 text-zinc-100 text-sm hover:bg-red-600/90 rounded-lg',
                 iconRounded: 'bg-indigo-600 text-zinc-200 text-sm hover:bg-indigo-600/80 rounded-full'
             },
             size: {

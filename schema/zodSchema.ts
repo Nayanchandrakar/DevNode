@@ -20,3 +20,14 @@ export const profileSchema = z.object({
   githubProfile: z.string(),
   LinkedinUrl: z.string(),
 })
+
+export const communitySchema = z.object({
+  subDomain: z
+    .string()
+    .min(5, "minimum 5 characters required")
+    .max(15, "max 15 characters"),
+  communityName: z
+    .string()
+    .min(5, "minimum 5 characters required")
+    .max(15, "max 10 characters"),
+})
