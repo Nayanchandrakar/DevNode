@@ -12,17 +12,25 @@ const Page = async ({ }) => {
         const community = await db?.community?.findFirst({
             where: {
                 ownerId: session?.user?.id,
+            },
+            include: {
+                followers: true,
+                posts: true
             }
         })
 
         if (community) {
-            return <ViewCommunity />
+            return <ViewCommunity community={community} />
         } else {
             return <CreateCommunity />
         }
     } else {
         return redirect('/sign-in')
     }
+
+
+    // return <ViewCommunity community={'nayan'} />
+
 
 }
 

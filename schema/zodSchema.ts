@@ -31,3 +31,8 @@ export const communitySchema = z.object({
     .min(5, "minimum 5 characters required")
     .max(15, "max 10 characters"),
 })
+
+export const createPost = z.object({
+  title: z.string().min(10, "minimum 20 characters required"),
+  body: z.any(),
+})
